@@ -1,5 +1,6 @@
 <script setup>
 import {useTeamStore} from '@/stores/TeamStore';
+import AddMemberModal from '@/components/AddMemberModal.vue'
 
 let team = useTeamStore();
 
@@ -8,12 +9,7 @@ let team = useTeamStore();
 <template>
   <header class="flex justify-between">
     <div>
-      <button
-        :disabled="! team.spotsRemaining"
-        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
-      >
-        Add Member ({{ team.spotsRemaining }} Spots Left)
-      </button>
+      <AddMemberModal></AddMemberModal>
     </div>
     <div>
       <div class="inline-flex items-center text-3xl relative">

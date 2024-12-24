@@ -8,10 +8,6 @@ let team = useTeamStore();
 
 team.fill()
 
-setTimeout(() => {
-  team.grow(25)
-}, 2000)
-
 </script>
 
 <template>
@@ -23,3 +19,7 @@ setTimeout(() => {
 
   <TeamFooter></TeamFooter>
 </template>
+
+
+
+
